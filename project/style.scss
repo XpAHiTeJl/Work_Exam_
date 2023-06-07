@@ -17,6 +17,7 @@ li {
 
 .header-container {
   @include d-flex(space-between, center);
+  position: fixed;
   width: 100%;
   height: 60px;
   background-color: $primary-bg;
@@ -65,23 +66,34 @@ li {
     }
   }
 }
-.money {
-  height: 180px;
-  width: 140px;
-  background: url(..//project/public/icons/2.jpg);
-  background-repeat: no-repeat;
-  background-size: 595px;
-  animation: play 1s steps(4) infinite, step 13s linear infinite;
-  position: absolute;
-  left: 0px;
+// .animation-man {
+//   height: 180px;
+//   width: 140px;
+//   background: url(..//project/public/icons/2.jpg);
+//   background-repeat: no-repeat;
+//   background-size: 595px;
+//   animation: play 1s steps(4) infinite, step 13s linear infinite;
+//   position: absolute;
+//   left: 0px;
+// }
+// @keyframes play {
+//   100% {
+//     background-position: -600px;
+//   }
+// }
+// @keyframes step {
+//   100% {
+//     left: 100%;
+//   }
+// }
+
+.main-container {
+  background: url(./public/images/backMain.jpg) fixed;
+  background-size: cover;
+  height: 100vh;
 }
-@keyframes play {
-  100% {
-    background-position: -600px;
-  }
-}
-@keyframes step {
-  100% {
-    left: 100%;
-  }
+.main-blox {
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
 }
