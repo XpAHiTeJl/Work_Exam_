@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/fcbb8558cc.js"
       crossorigin="anonymous"
@@ -17,7 +18,7 @@
             <img src="./public/icons/logo-header.png" alt="" />
           </div>
           <div class="navigation">
-            <nav>
+            <nav data-aos="fade-down" data-aos-duration="1000">
               <ul>
                 <li>
                   <a href="">Home</a>
@@ -28,7 +29,11 @@
             </nav>
           </div>
           <div class="profil-search">
-            <div class="profil-search_search">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              class="profil-search_search"
+            >
               <a href="#">
                 <i
                   class="fa-solid fa-magnifying-glass fa-xl"
@@ -44,14 +49,62 @@
             </div>
           </div>
         </div>
-        <!-- <div class="animation-man"></div> -->
       </section>
       <section class="main">
         <div class="main-container"></div>
-        <div class="main-blox"></div>
+        <div class="main-container_rules">
+          <div class="main-container_rules-box">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="rules-box_left"
+            ></div>
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              class="rules-box_right"
+            ></div>
+          </div>
+        </div>
+
+        <div class="main-container_fight">
+          <div class="main-container_fight-box">
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-down-left"
+              class="fight-box-left"
+            ></div>
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-up-right"
+              class="fight-box-right"
+            ></div>
+          </div>
+        </div>
+        <div class="main-matrix">
+          <div class="main-matrix_conteiner">
+            <div class="main-matrix_container-text">
+              <p>Наше время...</p>
+            </div>
+          </div>
+          <div class="main-matrix_video">
+            <video
+              width="100%"
+              height="100%"
+              autoplay
+              muted
+              loop
+              src="./public/video/matrix.mp4"
+            ></video>
+          </div>
+        </div>
       </section>
       <section></section>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
