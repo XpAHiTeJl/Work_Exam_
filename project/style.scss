@@ -176,3 +176,73 @@ li {
     }
   }
 }
+.main-container_topman {
+  height: 100vh;
+  background-image: url(./public/images/backMain7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include d-flex(center, center);
+  &-box {
+    position: relative;
+    @include d-flex(center, center);
+  }
+  .topman-box-left {
+    background-image: url(./public/images/binanceMAN.jpg);
+    background-size: cover;
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    right: -380px;
+    bottom: 50px;
+    border-radius: 25px;
+    box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+  }
+  .topman-box-right {
+    background-image: url(./public/images/etheriumMAN.jpg);
+    background-size: cover;
+    width: 700px;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    right: 380px;
+    bottom: 50px;
+    border-radius: 25px;
+    box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+  }
+}
+.main-container_newtime {
+  height: 100vh;
+  background-image: url(./public/images/newyork.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include d-flex(center, center);
+  &-box {
+    position: relative;
+    @include d-flex(center, center);
+  }
+  .newtime-box-left {
+    background-image: url(./public/images/battlebull.jpg);
+    background-size: cover;
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    right: -320px;
+    bottom: 180px;
+    border-radius: 25px;
+    box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+  }
+  .newtime-box-right {
+    background-image: url(./public/images/bitcoinVSephire.jpg);
+    background-size: cover;
+    width: 700px;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    right: 350px;
+    bottom: -120px;
+    border-radius: 25px;
+    box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+  }
+}
