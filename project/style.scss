@@ -14,6 +14,17 @@ a {
 li {
   list-style-type: none;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid;
+}
 
 .header-container {
   @include d-flex(space-between, center);
@@ -91,10 +102,12 @@ li {
     }
     .front {
       background-color: inherit;
-      background: rgba(5, 0, 0, 0.5);
+      background: rgba(5, 0, 0, 0.7);
       font-size: 80px;
       font-family: $ff-primary;
       color: white;
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+
       & p {
         position: absolute;
         bottom: 0;
@@ -104,8 +117,10 @@ li {
       }
     }
     .back {
-      background-color: #080606;
+      background-image: url(./public/images/rabs.webp);
+      background-size: cover;
       transform: rotateY(180deg);
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
     }
   }
   :hover .front {
@@ -133,8 +148,10 @@ li {
     .front {
       font-size: 80px;
       font-family: $ff-primary;
-      background: rgba(5, 0, 0, 0.5);
+      background: rgba(5, 0, 0, 0.7);
       color: white;
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+
       & p {
         position: absolute;
         bottom: 0;
@@ -144,8 +161,10 @@ li {
       }
     }
     .back {
-      background-color: #a11717;
+      background-image: url(./public/images/rabstraiders.webp);
+      background-size: cover;
       transform: rotateY(180deg);
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
     }
   }
   :hover .front {
@@ -405,14 +424,7 @@ li {
     }
   }
 }
-.footer-container_animation {
-  height: 25vh;
-  .footer-container_bear {
-    height: 25vh;
-    display: flex;
-    align-items: center;
-  }
-}
+
 .footer-container_contact {
   height: 50vh;
   background-color: #585858;
