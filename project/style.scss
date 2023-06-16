@@ -416,7 +416,7 @@ li {
   }
 }
 .footer-container_search {
-  background: url(./public/images/backfooter.jpg);
+  // background: url(./public/images/backfooter.jpg);
   background-repeat: no-repeat;
   background-position: 50%;
   height: 25vh;
@@ -462,6 +462,28 @@ li {
 }
 
 .footer-container_contact {
-  height: 50vh;
-  background-color: #585858;
+  height: 25vh;
+  // background-color: #585858;
+  background-color: black;
+  @include d-flex(center, center);
+
+  &-social {
+    width: 500px;
+    height: 100px;
+    @include d-flex(center, center);
+    & form {
+      & ul {
+        width: 500px;
+        height: 100px;
+        @include d-flex(space-between, center);
+      }
+    }
+  }
+}
+.footer-container_copyright {
+  background-color: black;
+  & p {
+    text-align: center;
+    color: white;
+  }
 }
