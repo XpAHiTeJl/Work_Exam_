@@ -349,7 +349,7 @@ li {
     z-index: 1;
     right: 380px;
     bottom: 50px;
-    border-radius: 25px;
+    border-radius: $br-box;
     box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
     & p {
       position: absolute;
@@ -381,7 +381,7 @@ li {
     z-index: 2;
     right: -320px;
     bottom: 180px;
-    border-radius: 25px;
+    border-radius: $br-box;
     box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
     & p {
       position: absolute;
@@ -402,13 +402,13 @@ li {
     z-index: 1;
     right: 350px;
     bottom: -120px;
-    border-radius: 25px;
+    border-radius: $br-box;
     box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
     & p {
       position: absolute;
       right: -500px;
       top: 160px;
-      font-size: 80px;
+      font-size: $fs-xl;
       font-family: $ff-primary;
       letter-spacing: 5px;
       color: white;
