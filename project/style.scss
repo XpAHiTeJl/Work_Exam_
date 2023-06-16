@@ -330,6 +330,15 @@ li {
     bottom: 50px;
     border-radius: 25px;
     box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+    & p {
+      position: absolute;
+      right: 230px;
+      top: 460px;
+      font-size: 80px;
+      font-family: $ff-primary;
+      letter-spacing: 5px;
+      color: white;
+    }
   }
   .topman-box-right {
     background-image: url(./public/images/etheriumMAN.jpg);
@@ -342,6 +351,15 @@ li {
     bottom: 50px;
     border-radius: 25px;
     box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+    & p {
+      position: absolute;
+      right: 230px;
+      top: 460px;
+      font-size: 80px;
+      font-family: $ff-primary;
+      letter-spacing: 5px;
+      color: white;
+    }
   }
 }
 .main-container_newtime {
@@ -365,6 +383,15 @@ li {
     bottom: 180px;
     border-radius: 25px;
     box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+    & p {
+      position: absolute;
+      right: 900px;
+      top: 100px;
+      font-size: 80px;
+      font-family: $ff-primary;
+      letter-spacing: 5px;
+      color: white;
+    }
   }
   .newtime-box-right {
     background-image: url(./public/images/bitcoinVSephire.jpg);
@@ -377,6 +404,15 @@ li {
     bottom: -120px;
     border-radius: 25px;
     box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+    & p {
+      position: absolute;
+      right: -500px;
+      top: 160px;
+      font-size: 80px;
+      font-family: $ff-primary;
+      letter-spacing: 5px;
+      color: white;
+    }
   }
 }
 .footer-container_search {
