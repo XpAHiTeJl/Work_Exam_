@@ -433,7 +433,7 @@ li {
         border-radius: 15px;
         border: none;
         font-size: 20px;
-        border-radius: 0px 200px 200px 0px;
+        border-radius: 50px 200px 200px 50px;
         box-shadow: -1px 11px 48px 10px rgba(0, 0, 0, 0.75);
         &::placeholder {
           color: black;
@@ -442,7 +442,7 @@ li {
 
         &:focus {
           background-color: rgba(240, 199, 123, 0.63);
-          color: white;
+          color: black;
         }
       }
       & button {
