@@ -73,6 +73,87 @@ li {
   background-size: cover;
   height: 100vh;
   @include d-flex(center, center);
+  .card-left {
+    width: 600px;
+    height: 450px;
+    position: relative;
+    perspective: 1000px;
+    right: 150px;
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include d-flex(center, center);
+      transition: 1s;
+      backface-visibility: hidden;
+      border-radius: 15px;
+    }
+    .front {
+      background-color: inherit;
+      background: rgba(5, 0, 0, 0.5);
+      font-size: 80px;
+      font-family: $ff-primary;
+      color: white;
+      & p {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 20px;
+        padding: 15px;
+      }
+    }
+    .back {
+      background-color: #080606;
+      transform: rotateY(180deg);
+    }
+  }
+  :hover .front {
+    transform: rotateY(180deg);
+  }
+  :hover .back {
+    transform: rotateY(360deg);
+  }
+  .card-right {
+    width: 600px;
+    height: 450px;
+    position: relative;
+    perspective: 1000px;
+    left: 150px;
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include d-flex(center, center);
+      transition: 1s;
+      backface-visibility: hidden;
+      border-radius: 15px;
+    }
+    .front {
+      font-size: 80px;
+      font-family: $ff-primary;
+      background: rgba(5, 0, 0, 0.5);
+      color: white;
+      & p {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 20px;
+        padding: 15px;
+      }
+    }
+    .back {
+      background-color: #a11717;
+      transform: rotateY(180deg);
+    }
+  }
+  :hover .front {
+    transform: rotateY(180deg);
+  }
+  :hover .back {
+    transform: rotateY(360deg);
+  }
 }
 .main-container_rules {
   height: 100vh;
@@ -326,6 +407,11 @@ li {
 }
 .footer-container_animation {
   height: 25vh;
+  .footer-container_bear {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+  }
 }
 .footer-container_contact {
   height: 50vh;
