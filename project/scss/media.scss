@@ -453,6 +453,908 @@
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+  .header-container {
+    padding: $padding-xs;
+    width: 110vh;
+    &_logo {
+      margin-left: 0px;
+      & img {
+        width: 40px;
+      }
+    }
+    .navigation {
+      & nav {
+        & ul {
+          & li {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+  .main-container {
+    background: url(./public/images/backMain.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 110vh;
+    height: 120vh;
+    @include d-flex(center, center);
+    .card-left {
+      //   width: 400px;
+      //   height: 350px;
+      position: relative;
+      perspective: 1000px;
+      //   right: -70px;
+      //   Если ставить 320х808, то -150px, если 320х573, то -70px
+      right: -200px;
+      top: -200px;
+      .front,
+      .back {
+        left: -35px;
+        top: 20px;
+        position: absolute;
+        width: 50%;
+        height: 70%;
+        @include d-flex(center, center);
+        transition: 1s;
+        backface-visibility: hidden;
+        border-radius: 15px;
+      }
+      .front {
+        width: 560px;
+        background-color: inherit;
+        background: rgba(5, 0, 0, 0.7);
+        font-size: 80px;
+        font-family: $ff-primary;
+        color: white;
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+
+        & p {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+      .back {
+        width: 560px;
+        background-image: url(./public/images/rabs.webp);
+        background-size: cover;
+        transform: rotateY(180deg);
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      }
+    }
+    :hover .front {
+      transform: rotateY(180deg);
+    }
+    :hover .back {
+      transform: rotateY(360deg);
+    }
+    .card-right {
+      //   width: 400px;
+      //   height: 350px;
+      position: relative;
+      perspective: 1000px;
+      left: -200px;
+      top: 250px;
+      .front,
+      .back {
+        top: 20px;
+        left: -80px;
+        position: absolute;
+        width: 50%;
+        height: 70%;
+        @include d-flex(center, center);
+        transition: 1s;
+        backface-visibility: hidden;
+        border-radius: 15px;
+      }
+      .front {
+        width: 560px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        background: rgba(5, 0, 0, 0.7);
+        color: white;
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+
+        & p {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+      .back {
+        width: 560px;
+        background-image: url(./public/images/rabstraiders.webp);
+        background-size: cover;
+        transform: rotateY(180deg);
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      }
+    }
+    :hover .front {
+      transform: rotateY(180deg);
+    }
+    :hover .back {
+      transform: rotateY(360deg);
+    }
+  }
+  .main-container_rules {
+    height: 120vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+
+    .rules-box_left {
+      background-image: url(./public/images/cleopatra.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 560px;
+      height: 300px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: 220px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px 7px;
+      & p {
+        position: absolute;
+        right: 160px;
+        top: -90px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+    .rules-box_right {
+      background-image: url(./public/images/cezar.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 560px;
+      height: 300px;
+      background-color: black;
+      position: absolute;
+      z-index: 2;
+      left: 0px;
+      top: 220px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px 11px;
+      & p {
+        position: absolute;
+        right: 160px;
+        top: -100px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .main-container_fight {
+    height: 110vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .fight-box-left {
+      background-image: url(./public/images/fight2.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 300px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: 170px;
+      border-radius: 25px;
+      box-shadow: 3px 3px 20px 10px;
+      & p {
+        position: absolute;
+        right: 50px;
+        top: -120px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+    .fight-box-right {
+      background-image: url(./public/images/fight.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 300px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: -250px;
+      border-radius: 25px;
+      box-shadow: -11px 3px 40px 22px;
+      & p {
+        position: absolute;
+        right: 150px;
+        top: -120px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .main-matrix {
+    width: 110vh;
+    display: flex;
+    flex-direction: column;
+    &_video {
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+    }
+    &_container {
+      &-text {
+        position: absolute;
+        z-index: 2;
+        left: 720px;
+        margin-top: 400px;
+        & p {
+          color: white;
+          font-size: 100px;
+        }
+      }
+    }
+  }
+  .main-container_topman {
+    height: 110vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .topman-box-left {
+      background-image: url(./public/images/binanceMAN.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 300px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: -180px;
+      border-radius: 25px;
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 150px;
+        top: 300px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+    .topman-box-right {
+      background-image: url(./public/images/etheriumMAN.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 300px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: 250px;
+      border-radius: $br-box;
+      box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 200px;
+        top: 300px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+  }
+  .main-container_newtime {
+    height: 110vh;
+    width: 110vh;
+    background-image: url(./public/images/newyork.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .newtime-box-left {
+      background-image: url(./public/images/battlebull.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 300px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: 250px;
+      border-radius: $br-box;
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 150px;
+        top: 300px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+    .newtime-box-right {
+      background-image: url(./public/images/bitcoinVSephire.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 300px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: -250px;
+      border-radius: $br-box;
+      box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 100px;
+        top: -120px;
+        font-size: $fs-xl;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+  }
+  .footer-container_search {
+    // background: url(./public/images/backfooter.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 15vh;
+    width: 110vh;
+    @include d-flex(center, center);
+    &-box {
+      @include d-flex(center, center);
+      & form {
+        position: relative;
+
+        & input {
+          width: 50vh;
+          height: 4vh;
+          padding: 15px;
+          border-radius: 15px;
+          border: none;
+          font-size: 20px;
+          border-radius: 50px 200px 200px 50px;
+          box-shadow: -1px 11px 48px 10px rgba(0, 0, 0, 0.75);
+          &::placeholder {
+            color: black;
+            font-size: 15px;
+          }
+
+          &:focus {
+            background-color: rgba(240, 199, 123, 0.63);
+            color: black;
+          }
+        }
+        & button {
+          width: 55px;
+          position: absolute;
+          height: 4vh;
+          right: 0;
+          top: 0;
+          border-radius: 200px 200px 200px 200px;
+          border: none;
+          font-size: 10px;
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+  .footer-container_contact {
+    height: 15vh;
+    width: 110vh;
+    // background-color: #585858;
+    background-color: black;
+    @include d-flex(center, center);
+
+    &-social {
+      width: 500px;
+      height: 100px;
+      @include d-flex(center, center);
+      & form {
+        & ul {
+          width: 500px;
+          height: 100px;
+          @include d-flex(space-between, center);
+        }
+      }
+    }
+  }
+  .footer-container_copyright {
+    background-color: black;
+    width: 110vh;
+
+    & p {
+      text-align: center;
+      color: white;
+    }
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .header-container {
+    padding: $padding-xs;
+    width: 100vh;
+    &_logo {
+      margin-left: 0px;
+      & img {
+        width: 40px;
+      }
+    }
+    .navigation {
+      & nav {
+        & ul {
+          & li {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+  .main-container {
+    background: url(./public/images/backMain.jpg);
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 205vh;
+    @include d-flex(center, center);
+    .card-left {
+      width: 400px;
+      height: 350px;
+      position: relative;
+      perspective: 1000px;
+      //   right: -70px;
+      //   Если ставить 320х808, то -150px, если 320х573, то -70px
+      right: -150px;
+      top: -300px;
+      .front,
+      .back {
+        left: -35px;
+        top: 20px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include d-flex(center, center);
+        transition: 1s;
+        backface-visibility: hidden;
+        border-radius: 15px;
+      }
+      .front {
+        width: 560px;
+        background-color: inherit;
+        background: rgba(5, 0, 0, 0.7);
+        font-size: 80px;
+        font-family: $ff-primary;
+        color: white;
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+
+        & p {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+      .back {
+        width: 560px;
+        background-image: url(./public/images/rabs.webp);
+        background-size: cover;
+        transform: rotateY(180deg);
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      }
+    }
+    :hover .front {
+      transform: rotateY(180deg);
+    }
+    :hover .back {
+      transform: rotateY(360deg);
+    }
+    .card-right {
+      width: 400px;
+      height: 350px;
+      position: relative;
+      perspective: 1000px;
+      left: -200px;
+      top: 150px;
+      .front,
+      .back {
+        top: 20px;
+        left: -80px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include d-flex(center, center);
+        transition: 1s;
+        backface-visibility: hidden;
+        border-radius: 15px;
+      }
+      .front {
+        width: 560px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        background: rgba(5, 0, 0, 0.7);
+        color: white;
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+
+        & p {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+      .back {
+        width: 560px;
+        background-image: url(./public/images/rabstraiders.webp);
+        background-size: cover;
+        transform: rotateY(180deg);
+        box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      }
+    }
+    :hover .front {
+      transform: rotateY(180deg);
+    }
+    :hover .back {
+      transform: rotateY(360deg);
+    }
+  }
+  .main-container_rules {
+    height: 205vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+
+    .rules-box_left {
+      background-image: url(./public/images/cleopatra.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 560px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: 300px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px 7px;
+      & p {
+        position: absolute;
+        right: 160px;
+        top: -90px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+    .rules-box_right {
+      background-image: url(./public/images/cezar.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 560px;
+      height: 400px;
+      background-color: black;
+      position: absolute;
+      z-index: 2;
+      left: 0px;
+      top: 300px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px 11px;
+      & p {
+        position: absolute;
+        right: 160px;
+        top: -100px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .main-container_fight {
+    height: 205vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .fight-box-left {
+      background-image: url(./public/images/fight2.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: 250px;
+      border-radius: 25px;
+      box-shadow: 3px 3px 20px 10px;
+      & p {
+        position: absolute;
+        right: 50px;
+        top: -120px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+    .fight-box-right {
+      background-image: url(./public/images/fight.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: -300px;
+      border-radius: 25px;
+      box-shadow: -11px 3px 40px 22px;
+      & p {
+        position: absolute;
+        right: 150px;
+        top: -120px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .main-matrix {
+    width: 110vh;
+    display: flex;
+    flex-direction: column;
+    &_video {
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+    }
+    &_container {
+      &-text {
+        position: absolute;
+        z-index: 2;
+        left: 720px;
+        margin-top: 400px;
+        & p {
+          color: white;
+          font-size: 100px;
+        }
+      }
+    }
+  }
+  .main-container_topman {
+    height: 205vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .topman-box-left {
+      background-image: url(./public/images/binanceMAN.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: -200px;
+      border-radius: 25px;
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 150px;
+        top: 400px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+    .topman-box-right {
+      background-image: url(./public/images/etheriumMAN.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: 340px;
+      border-radius: $br-box;
+      box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 200px;
+        top: 410px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+  }
+  .main-container_newtime {
+    height: 205vh;
+    width: 110vh;
+    background-image: url(./public/images/newyork.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .newtime-box-left {
+      background-image: url(./public/images/battlebull.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: 320px;
+      border-radius: $br-box;
+      box-shadow: 22px 0px 53px 43px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 150px;
+        top: 400px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+    .newtime-box-right {
+      background-image: url(./public/images/bitcoinVSephire.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: -320px;
+      border-radius: $br-box;
+      box-shadow: -1px 13px 47px 12px rgba(0, 0, 0, 0.69);
+      & p {
+        position: absolute;
+        right: 100px;
+        top: -120px;
+        font-size: $fs-xl;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+        color: white;
+      }
+    }
+  }
+  .footer-container_search {
+    // background: url(./public/images/backfooter.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 25vh;
+    width: 110vh;
+    @include d-flex(center, center);
+    &-box {
+      @include d-flex(center, center);
+      & form {
+        position: relative;
+
+        & input {
+          width: 50vh;
+          height: 4vh;
+          padding: 15px;
+          border-radius: 15px;
+          border: none;
+          font-size: 20px;
+          border-radius: 50px 200px 200px 50px;
+          box-shadow: -1px 11px 48px 10px rgba(0, 0, 0, 0.75);
+          &::placeholder {
+            color: black;
+            font-size: 15px;
+          }
+
+          &:focus {
+            background-color: rgba(240, 199, 123, 0.63);
+            color: black;
+          }
+        }
+        & button {
+          width: 55px;
+          position: absolute;
+          height: 4vh;
+          right: 0;
+          top: 0;
+          border-radius: 200px 200px 200px 200px;
+          border: none;
+          font-size: 10px;
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+  .footer-container_contact {
+    height: 25vh;
+    width: 110vh;
+    // background-color: #585858;
+    background-color: black;
+    @include d-flex(center, center);
+
+    &-social {
+      width: 500px;
+      height: 100px;
+      @include d-flex(center, center);
+      & form {
+        & ul {
+          width: 500px;
+          height: 100px;
+          @include d-flex(space-between, center);
+        }
+      }
+    }
+  }
+  .footer-container_copyright {
+    background-color: black;
+    width: 110vh;
+
+    & p {
+      text-align: center;
+      color: white;
+    }
+  }
 }
