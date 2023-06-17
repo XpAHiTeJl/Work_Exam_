@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width: 576px) {
   .header-container {
     padding: $padding-xs;
-    width: 70%;
+    width: 60%;
     &_logo {
       margin-left: 0px;
       & img {
@@ -22,7 +22,7 @@
     background: url(./public/images/backMain.jpg);
     background-size: cover;
     background-position: center;
-    width: 157vh;
+    width: 110vh;
     height: 205vh;
     @include d-flex(center, center);
     .card-left {
@@ -85,7 +85,7 @@
       .front,
       .back {
         top: 20px;
-        left: -110px;
+        left: 0px;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -123,6 +123,63 @@
     }
     :hover .back {
       transform: rotateY(360deg);
+    }
+  }
+  .main-container_rules {
+    height: 205vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+
+    .rules-box_left {
+      background-image: url(./public/images/cleopatra.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 560px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: 300px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px 7px;
+      & p {
+        position: absolute;
+        right: 160px;
+        top: -90px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+    .rules-box_right {
+      background-image: url(./public/images/cezar.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 560px;
+      height: 400px;
+      background-color: black;
+      position: absolute;
+      z-index: 2;
+      left: 0px;
+      top: 300px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px 11px;
+      & p {
+        position: absolute;
+        right: 160px;
+        top: -100px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
     }
   }
 }
