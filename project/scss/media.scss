@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width: 576px) {
   .header-container {
     padding: $padding-xs;
-    width: 60%;
+    width: 76%;
     &_logo {
       margin-left: 0px;
       & img {
@@ -176,6 +176,58 @@
         position: absolute;
         right: 160px;
         top: -100px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .main-container_fight {
+    height: 205vh;
+    width: 110vh;
+    background-image: url(./public/images/backMain4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include d-flex(center, center);
+    &-box {
+      position: relative;
+      @include d-flex(center, center);
+    }
+    .fight-box-left {
+      background-image: url(./public/images/fight2.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: absolute;
+      z-index: 2;
+      right: 0px;
+      bottom: 250px;
+      border-radius: 25px;
+      box-shadow: 3px 3px 20px 10px;
+      & p {
+        position: absolute;
+        right: 50px;
+        top: -120px;
+        font-size: 80px;
+        font-family: $ff-primary;
+        letter-spacing: 5px;
+      }
+    }
+    .fight-box-right {
+      background-image: url(./public/images/fight.jpg);
+      background-size: cover;
+      width: 560px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      right: 0px;
+      bottom: -300px;
+      border-radius: 25px;
+      box-shadow: -11px 3px 40px 22px;
+      & p {
+        position: absolute;
+        right: 150px;
+        top: -120px;
         font-size: 80px;
         font-family: $ff-primary;
         letter-spacing: 5px;
