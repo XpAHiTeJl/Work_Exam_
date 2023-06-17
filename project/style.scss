@@ -476,6 +476,12 @@ li {
         width: 500px;
         height: 100px;
         @include d-flex(space-between, center);
+        & li {
+          transition: 300ms;
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
       }
     }
   }
