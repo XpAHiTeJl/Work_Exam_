@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width: 576px) {
   .header-container {
     padding: $padding-xs;
-    width: 81%;
+    width: 70%;
     &_logo {
       margin-left: 0px;
       & img {
@@ -12,7 +12,7 @@
       & nav {
         & ul {
           & li {
-            width: 320px;
+            width: 300px;
           }
         }
       }
@@ -26,7 +26,7 @@
     height: 205vh;
     @include d-flex(center, center);
     .card-left {
-      width: 200px;
+      width: 400px;
       height: 350px;
       position: relative;
       perspective: 1000px;
@@ -34,6 +34,8 @@
       top: -300px;
       .front,
       .back {
+        left: -50px;
+        top: 20px;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -43,6 +45,7 @@
         border-radius: 15px;
       }
       .front {
+        width: 450px;
         background-color: inherit;
         background: rgba(5, 0, 0, 0.7);
         font-size: 80px;
@@ -59,6 +62,7 @@
         }
       }
       .back {
+        width: 450px;
         background-image: url(./public/images/rabs.webp);
         background-size: cover;
         transform: rotateY(180deg);
@@ -76,10 +80,12 @@
       height: 350px;
       position: relative;
       perspective: 1000px;
-      left: 150px;
+      left: -150px;
       top: 150px;
       .front,
       .back {
+        top: 20px;
+        left: -110px;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -89,6 +95,7 @@
         border-radius: 15px;
       }
       .front {
+        width: 450px;
         font-size: 80px;
         font-family: $ff-primary;
         background: rgba(5, 0, 0, 0.7);
@@ -104,6 +111,7 @@
         }
       }
       .back {
+        width: 450px;
         background-image: url(./public/images/rabstraiders.webp);
         background-size: cover;
         transform: rotateY(180deg);
